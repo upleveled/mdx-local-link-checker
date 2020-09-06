@@ -4,6 +4,10 @@
   "main": "index.js",
   "bin": "./index.js",
   "license": "MIT",
+  "repository": "upleveled/mdx-local-link-checker",
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "@mdx-js/mdx": "1.6.16",
     "nanomatch": "1.2.13",
