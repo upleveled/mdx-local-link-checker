@@ -179,7 +179,8 @@ for (const file in cache) {
     }
 
     if (targetId && (!cache[targetFile] || !cache[targetFile].ids[targetId])) {
-      console.warn(
+      exitCode = 1;
+      console.error(
         `Anchor of link is broken: '${link.original}' in file ${filePathAbs}`,
       );
     }
