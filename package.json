@@ -12,7 +12,7 @@
     "@mdx-js/mdx": "1.6.21",
     "nanomatch": "1.2.13",
     "remark-slug": "6.0.0",
-    "unist-util-remove": "2.0.1",
+    "unist-util-remove": "3.0.0",
     "walk-sync": "2.2.0"
   },
   "scripts": {
