@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-import { readFileSync, existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
-import walkSync from 'walk-sync';
 import mdx from '@mdx-js/mdx';
-import { remove } from 'unist-util-remove';
-import slugPlugin from 'remark-slug';
 import nano from 'nanomatch';
+import slugPlugin from 'remark-slug';
+import { remove } from 'unist-util-remove';
+import walkSync from 'walk-sync';
+
 const isMatch = nano.isMatch;
 
 if (/--help|-h/.test(process.argv[2])) {
@@ -55,6 +56,7 @@ const filePaths = walkSync(dir, { directories: false });
 function fillCache(markdownOrJsx, filePath, filePathAbs) {
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:id|name)":\s*)|(?:(?:id|name)=))"([^"]+)"/g,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     (_, match) => {
       if (match && match.match) {
         cache[filePathAbs].ids[match] = true;
@@ -64,6 +66,7 @@ function fillCache(markdownOrJsx, filePath, filePathAbs) {
 
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:href|to|src)":\s*)|(?:(?:href|to|src)=))"([^"]+)"/g,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     (_, match) => {
       if (match && match.match) {
         if (
