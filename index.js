@@ -1,7 +1,19 @@
 #!/usr/bin/env node
 
+import { existsSync, readFileSync } from 'node:fs';
+import path from 'node:path';
+import mdx from '@mdx-js/mdx';
+import nano from 'nanomatch';
+import slugPlugin from 'remark-slug';
+import { remove } from 'unist-util-remove';
+import walkSync from 'walk-sync';
+
+const isMatch = nano.isMatch;
+
 if (/--help|-h/.test(process.argv[2])) {
-  console.log(`mdx-local-link-checker ${require('./package.json').version}
+  console.log(`mdx-local-link-checker ${
+    JSON.parse(readFileSync('./package.json')).version
+  }
 
 Usage: mdx-local-link-checker [dir] [basepath] [ignorePattern]
 
@@ -21,14 +33,6 @@ mdx-local-link-checker src/pages/docs src/pages
 `);
   process.exit(0);
 }
-
-const fs = require('fs');
-const path = require('path');
-const walkSync = require('walk-sync');
-const mdx = require('@mdx-js/mdx');
-const remove = require('unist-util-remove');
-const slugPlugin = require('remark-slug');
-const { isMatch } = require('nanomatch');
 
 function remarkRemoveCodeNodes() {
   return function transformer(tree) {
@@ -52,7 +56,7 @@ const filePaths = walkSync(dir, { directories: false });
 function fillCache(markdownOrJsx, filePath, filePathAbs) {
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:id|name)":\s*)|(?:(?:id|name)=))"([^"]+)"/g,
-    (_, match) => {
+    (str, match) => {
       if (match && match.match) {
         cache[filePathAbs].ids[match] = true;
       }
@@ -61,7 +65,7 @@ function fillCache(markdownOrJsx, filePath, filePathAbs) {
 
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:href|to|src)":\s*)|(?:(?:href|to|src)=))"([^"]+)"/g,
-    (_, match) => {
+    (str, match) => {
       if (match && match.match) {
         if (
           !match.match(
@@ -114,7 +118,7 @@ function readFileIntoCache(filePath) {
   }
 
   const markdown = removeMarkdownCodeBlocks(
-    fs.readFileSync(filePathAbs).toString(),
+    readFileSync(filePathAbs).toString(),
   );
 
   let jsx = '';
@@ -162,7 +166,7 @@ for (const file in cache) {
     const [targetFile, targetId] = link.absolute.split('#');
 
     if (!cache[targetFile]) {
-      if (fs.existsSync(targetFile)) {
+      if (existsSync(targetFile)) {
         readFileIntoCache(targetFile);
       } else {
         exitCode = 1;
