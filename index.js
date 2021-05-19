@@ -56,8 +56,7 @@ const filePaths = walkSync(dir, { directories: false });
 function fillCache(markdownOrJsx, filePath, filePathAbs) {
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:id|name)":\s*)|(?:(?:id|name)=))"([^"]+)"/g,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    (_, match) => {
+    (str, match) => {
       if (match && match.match) {
         cache[filePathAbs].ids[match] = true;
       }
@@ -66,8 +65,7 @@ function fillCache(markdownOrJsx, filePath, filePathAbs) {
 
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:href|to|src)":\s*)|(?:(?:href|to|src)=))"([^"]+)"/g,
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    (_, match) => {
+    (str, match) => {
       if (match && match.match) {
         if (
           !match.match(
