@@ -331,10 +331,10 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@next/eslint-plugin-next@10.2.1-canary.11":
-  version "10.2.1-canary.11"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-10.2.1-canary.11.tgz#2bf4c1c4f01ab4604288dbf5d8510fec2d2f6411"
-  integrity sha512-aJ2APV/APzpn2RkU4q5bXB0uij6+rIxrbTP7geUhYPz4bF+i9PUIRvw0uGsXEL+ddkrwACjOLYqXjRWFRu5SFw==
+"@next/eslint-plugin-next@10.2.2":
+  version "10.2.2"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-10.2.2.tgz#e6835ed2687078976369b5b5819f8a3b9cbe22fd"
+  integrity sha512-VuESoMro0DrwChhTH1BiML1cyFaIMpxOlLHZpk8kXO4/+hQ2CPJCfmyKLkY9TaV1j4ZeLrTL1LSOj9zr5KMc9Q==
 
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
@@ -386,10 +386,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.4.tgz#f0ec25dbf2f0e4b18647313ac031134ca5b24b21"
   integrity sha512-1z8k4wzFnNjVK/tlxvrWuK5WMt6mydWWP7+zvH5eFep4oj+UkrfiJTRtjCeBXNpwaA/FYqqtb4/QS4ianFpIRA==
 
-"@types/node@15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.0.tgz#557dd0da4a6dca1407481df3bbacae0cd6f68042"
-  integrity sha512-YN1d+ae2MCb4U0mMa+Zlb5lWTdpFShbAj5nmte6lel27waMMBfivrm0prC16p/Di3DyTrmerrYUT8/145HXxVw==
+"@types/node@15.0.1":
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
+  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -502,10 +502,10 @@
     "@typescript-eslint/types" "4.24.0"
     eslint-visitor-keys "^2.0.0"
 
-"@upleveled/eslint-config-upleveled@1.13.1":
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/@upleveled/eslint-config-upleveled/-/eslint-config-upleveled-1.13.1.tgz#104fc1c1abe44503f8c35f2e22d8a17f2697d806"
-  integrity sha512-uu9Ne7rZEzpoX+7CF4KPnU6u8RDIJNHAFojjAx4kT27P4oB6A4ggvooiB31ArXJavsp5Rd1lgbpdjboCB3vuDg==
+"@upleveled/eslint-config-upleveled@1.13.4":
+  version "1.13.4"
+  resolved "https://registry.yarnpkg.com/@upleveled/eslint-config-upleveled/-/eslint-config-upleveled-1.13.4.tgz#e71a59ca11a8c060e15380b964055a66c094f8d1"
+  integrity sha512-ZLqSaJAabm2as+7aTA4bikWPzkA4RGc5ExAEmQ7ADOaDZ5LC9K+gujjA6xjiNHkscnEEApW8yR2ajkMGgVc/Gw==
 
 acorn-jsx@^5.3.1:
   version "5.3.1"
