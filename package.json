@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
-    "nanomatch": "1.2.13",
+    "micromatch": "^4.0.4",
     "remark-slug": "6.0.0",
     "unist-util-remove": "3.0.0",
     "walk-sync": "2.2.0"

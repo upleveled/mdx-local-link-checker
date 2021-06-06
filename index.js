@@ -3,12 +3,12 @@
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import mdx from '@mdx-js/mdx';
-import nano from 'nanomatch';
+import micromatch from 'micromatch';
 import slugPlugin from 'remark-slug';
 import { remove } from 'unist-util-remove';
 import walkSync from 'walk-sync';
 
-const isMatch = nano.isMatch;
+const isMatch = micromatch.isMatch;
 
 if (/--help|-h/.test(process.argv[2])) {
   console.log(`mdx-local-link-checker ${
