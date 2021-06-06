@@ -18,6 +18,10 @@ mdx-local-link-checker
 # folder called "books" (at any depth)
 mdx-local-link-checker src/pages src/pages "/books/**"
 
+# Check the src/pages folder, ignoring anything in a
+# folder called "books" or "slide-decks" (at any depth)
+mdx-local-link-checker src/pages src/pages "/(books|slide-decks)/**"
+
 # Check only the docs folder with the src/pages
 # folder set to be the base path (for root-relative
 # links such as "/docs/router")
