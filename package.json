@@ -14,7 +14,7 @@
     "micromatch": "^4.0.4",
     "remark-slug": "6.0.0",
     "unist-util-remove": "3.0.0",
-    "walk-sync": "2.2.0"
+    "walk-sync": "3.0.0"
   },
   "scripts": {
     "start": "node index.js"
