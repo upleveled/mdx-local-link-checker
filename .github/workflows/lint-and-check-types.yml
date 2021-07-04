@@ -1,4 +1,4 @@
-name: Lint
+name: Lint and Check Types
 on: push
 
 jobs:
@@ -13,3 +13,4 @@ jobs:
           node-version: '16'
       - run: yarn --frozen-lockfile
       - run: yarn eslint .
+      - run: yarn tsc

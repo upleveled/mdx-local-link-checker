@@ -12,7 +12,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
 
-    "allowJs": true,
+    "checkJs": true,
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
@@ -22,12 +22,6 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": [
-    ".eslintrc.mjs",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js"
-  ],
+  "include": [".eslintrc.mjs", "**/*.ts", "**/*.d.ts", "**/*.tsx", "**/*.js"],
   "exclude": ["node_modules", "build"]
 }

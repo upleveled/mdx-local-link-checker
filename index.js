@@ -12,7 +12,7 @@ const isMatch = micromatch.isMatch;
 
 if (/--help|-h/.test(process.argv[2])) {
   console.log(`mdx-local-link-checker ${
-    JSON.parse(readFileSync('./package.json')).version
+    JSON.parse(readFileSync('./package.json', 'utf-8')).version
   }
 
 Usage: mdx-local-link-checker [dir] [basepath] [ignorePattern]
@@ -35,15 +35,29 @@ mdx-local-link-checker src/pages/docs src/pages
 }
 
 function remarkRemoveCodeNodes() {
-  return function transformer(tree) {
+  return function transformer(/** @type {import('unist').Node} */ tree) {
     remove(tree, 'code');
   };
 }
 
-function removeMarkdownCodeBlocks(markdown) {
+function removeMarkdownCodeBlocks(/** @type {string} */ markdown) {
   return markdown.replace(/```[\s\S]+?```/g, '');
 }
 
+/** @type {{
+ *   [filePathAbs: string]: {
+ *     filePath: string,
+ *     filePathAbs: string,
+ *     externalLinks: string[],
+ *     internalLinks: {
+ *       original: string,
+ *       absolute: string,
+ *     }[],
+ *     ids: {
+ *       [id: string]: boolean,
+ *     },
+ *   },
+ * }} */
 const cache = {};
 let exitCode = 0;
 
@@ -53,19 +67,27 @@ const ignorePattern = process.argv[4];
 
 const filePaths = walkSync(dir, { directories: false });
 
-function fillCache(markdownOrJsx, filePath, filePathAbs) {
+function fillCache(
+  /** @type {string} */ markdownOrJsx,
+  /** @type {string} */ filePath,
+  /** @type {string} */ filePathAbs,
+) {
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:id|name)":\s*)|(?:(?:id|name)=))"([^"]+)"/g,
-    (str, match) => {
+    (/** @type {string} */ str, /** @type {string} */ match) => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       if (match && match.match) {
         cache[filePathAbs].ids[match] = true;
       }
+      // Discard replacement
+      return '';
     },
   );
 
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:href|to|src)":\s*)|(?:(?:href|to|src)=))"([^"]+)"/g,
-    (str, match) => {
+    (/** @type {string} */ str, /** @type {string} */ match) => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
       if (match && match.match) {
         if (
           !match.match(
@@ -95,7 +117,8 @@ function fillCache(markdownOrJsx, filePath, filePathAbs) {
           } else if (isRootRelativeLink) {
             absolute = path.resolve(path.join(basepath, match));
           } else {
-            const [, filePathBase] = filePath.match(/^(.+\/)[^/]+$/);
+            const result = filePath.match(/^(.+\/)[^/]+$/);
+            const filePathBase = result?.[1];
             absolute = path.resolve(filePathBase + '/' + match);
           }
 
@@ -105,11 +128,13 @@ function fillCache(markdownOrJsx, filePath, filePathAbs) {
           });
         }
       }
+      // Discard replacement
+      return '';
     },
   );
 }
 
-function readFileIntoCache(filePath) {
+function readFileIntoCache(/** @type {string} */ filePath) {
   const filePathAbs = path.resolve(filePath);
   const fileExt = filePath.split('.').pop();
 
@@ -135,6 +160,7 @@ function readFileIntoCache(filePath) {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!cache[filePathAbs]) {
     cache[filePathAbs] = {
       filePath,
@@ -154,6 +180,7 @@ filePaths.forEach((relativePath) => {
   readFileIntoCache(filePath);
 });
 
+/** @type {string[]} */
 const errors = [];
 
 for (const file in cache) {
@@ -165,6 +192,7 @@ for (const file in cache) {
 
     const [targetFile, targetId] = link.absolute.split('#');
 
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!cache[targetFile]) {
       if (existsSync(targetFile)) {
         readFileIntoCache(targetFile);
@@ -182,6 +210,7 @@ for (const file in cache) {
       }
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (targetId && (!cache[targetFile] || !cache[targetFile].ids[targetId])) {
       exitCode = 1;
       console.error(
