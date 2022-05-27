@@ -75,10 +75,7 @@ function fillCache(
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:id|name)":\s*)|(?:(?:id|name)=))"([^"]+)"/g,
     (/** @type {string} */ str, /** @type {string} */ match) => {
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-      if (match && match.match) {
-        cache[filePathAbs].ids[match] = true;
-      }
+      cache[filePathAbs].ids[match] = true;
       // Discard replacement
       return '';
     },
