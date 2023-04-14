@@ -1,23 +1,31 @@
 {
   "name": "mdx-local-link-checker",
   "version": "2.1.1",
-  "main": "index.js",
-  "bin": "./index.js",
+  "repository": "upleveled/mdx-local-link-checker",
   "license": "MIT",
   "type": "module",
-  "repository": "upleveled/mdx-local-link-checker",
+  "main": "index.js",
+  "bin": "./index.js",
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "resolutions": {
+    "@typescript-eslint/eslint-plugin": "5.57.1",
+    "@typescript-eslint/parser": "5.57.1",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0"
+  },
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
     "micromatch": "^4.0.4",
     "remark-slug": "7.0.1",
     "unist-util-remove": "3.1.1",
     "walk-sync": "3.0.0"
-  },
-  "scripts": {
-    "start": "node index.js"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.21.3",
@@ -28,11 +36,9 @@
     "@types/react-dom": "18.0.11",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
-    "eslint-config-upleveled": "4.0.12",
-    "@upleveled/eslint-plugin-upleveled": "2.1.6",
-    "@babel/eslint-parser": "7.21.3",
     "eslint": "8.37.0",
     "eslint-config-react-app": "7.0.1",
+    "eslint-config-upleveled": "4.0.12",
     "eslint-import-resolver-typescript": "3.5.5",
     "eslint-plugin-cypress": "2.13.2",
     "eslint-plugin-flowtype": "8.0.3",
@@ -46,14 +52,7 @@
     "eslint-plugin-sonarjs": "0.19.0",
     "eslint-plugin-testing-library": "5.10.2",
     "eslint-plugin-unicorn": "46.0.0",
+    "eslint-plugin-upleveled": "2.1.7",
     "typescript": "5.0.3"
-  },
-  "resolutions": {
-    "@typescript-eslint/eslint-plugin": "5.57.1",
-    "@typescript-eslint/parser": "5.57.1",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsx-a11y": "6.7.1",
-    "eslint-plugin-react": "7.32.2",
-    "eslint-plugin-react-hooks": "4.6.0"
   }
 }
