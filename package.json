@@ -21,9 +21,9 @@
     "walk-sync": "3.0.0"
   },
   "devDependencies": {
-    "@types/micromatch": "4.0.3",
-    "@types/node": "20.8.5",
-    "@types/unist": "3.0.0",
+    "@types/micromatch": "4.0.4",
+    "@types/node": "20.8.7",
+    "@types/unist": "3.0.1",
     "eslint-config-upleveled": "5.1.0",
     "typescript": "5.2.2"
   }
