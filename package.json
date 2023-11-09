@@ -24,7 +24,7 @@
     "@types/micromatch": "4.0.5",
     "@types/node": "20.9.0",
     "@types/unist": "3.0.2",
-    "eslint-config-upleveled": "5.1.1",
+    "eslint-config-upleveled": "6.2.0",
     "typescript": "5.2.2"
   }
 }
