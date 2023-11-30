@@ -29,14 +29,14 @@ devDependencies:
     specifier: 4.0.6
     version: 4.0.6
   '@types/node':
-    specifier: 20.9.5
-    version: 20.9.5
+    specifier: 20.10.1
+    version: 20.10.1
   '@types/unist':
     specifier: 3.0.2
     version: 3.0.2
   eslint-config-upleveled:
     specifier: 7.3.3
-    version: 7.3.3(@babel/core@7.21.8)(@types/eslint@8.44.7)(@types/node@20.9.5)(@types/react-dom@18.2.17)(@types/react@18.2.38)(eslint@8.54.0)(globals@13.23.0)(typescript@5.3.2)
+    version: 7.3.3(@babel/core@7.21.8)(@types/eslint@8.44.7)(@types/node@20.10.1)(@types/react-dom@18.2.17)(@types/react@18.2.38)(eslint@8.54.0)(globals@13.23.0)(typescript@5.3.2)
   typescript:
     specifier: 5.3.2
     version: 5.3.2
@@ -109,7 +109,7 @@ packages:
       debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.3
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -148,7 +148,7 @@ packages:
       '@babel/helper-validator-option': 7.21.0
       browserslist: 4.21.5
       lru-cache: 5.1.1
-      semver: 6.3.0
+      semver: 6.3.1
     dev: true
 
   /@babel/helper-environment-visitor@7.21.5:
@@ -493,7 +493,7 @@ packages:
     resolution: {integrity: sha512-f5ORu2hcBbKei97U73mf+l9t4zTGl74IqZ0GQk4oVea/VS8tQZYkUveSYojk+frraAVYId0V2WC9O4PTNru2FQ==}
     dependencies:
       '@types/estree': 1.0.1
-      '@types/json-schema': 7.0.11
+      '@types/json-schema': 7.0.15
     dev: true
 
   /@types/estree@1.0.1:
@@ -534,8 +534,8 @@ packages:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
     dev: false
 
-  /@types/node@20.9.5:
-    resolution: {integrity: sha512-Uq2xbNq0chGg+/WQEU0LJTSs/1nKxz6u1iemLcGomkSnKokbW1fbLqc3HOqCf2JP7KjlL4QkS7oZZTrOQHQYgQ==}
+  /@types/node@20.10.1:
+    resolution: {integrity: sha512-T2qwhjWwGH81vUEx4EXmBKsTJRXFXNZTL4v0gi01+zyBmCwzE6TyHszqX01m+QHTEq+EZNo13NeJIdEqf+Myrg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1414,7 +1414,7 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-upleveled@7.3.3(@babel/core@7.21.8)(@types/eslint@8.44.7)(@types/node@20.9.5)(@types/react-dom@18.2.17)(@types/react@18.2.38)(eslint@8.54.0)(globals@13.23.0)(typescript@5.3.2):
+  /eslint-config-upleveled@7.3.3(@babel/core@7.21.8)(@types/eslint@8.44.7)(@types/node@20.10.1)(@types/react-dom@18.2.17)(@types/react@18.2.38)(eslint@8.54.0)(globals@13.23.0)(typescript@5.3.2):
     resolution: {integrity: sha512-9ZXyoKvI1klGDsYe1NWFu4BljqjWOCqkBzOGDCmBzAc4M1WrbI4oHj3NOWZgrU/VZTB/8dYbFPEM75qBFEj15Q==}
     engines: {node: '>=20.9.0'}
     hasBin: true
@@ -1430,7 +1430,7 @@ packages:
       '@babel/eslint-parser': 7.23.3(@babel/core@7.21.8)(eslint@8.54.0)
       '@next/eslint-plugin-next': 14.0.3
       '@types/eslint': 8.44.7
-      '@types/node': 20.9.5
+      '@types/node': 20.10.1
       '@types/react': 18.2.38
       '@types/react-dom': 18.2.17
       '@typescript-eslint/eslint-plugin': 6.12.0(@typescript-eslint/parser@6.12.0)(eslint@8.54.0)(typescript@5.3.2)
@@ -3169,11 +3169,6 @@ packages:
   /semver@5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
-
-  /semver@6.3.0:
-    resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
-    hasBin: true
-    dev: true
 
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
