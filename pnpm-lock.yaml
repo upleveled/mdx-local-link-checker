@@ -29,14 +29,14 @@ devDependencies:
     specifier: 4.0.6
     version: 4.0.6
   '@types/node':
-    specifier: 20.11.0
-    version: 20.11.0
+    specifier: 20.11.5
+    version: 20.11.5
   '@types/unist':
     specifier: 3.0.2
     version: 3.0.2
   eslint-config-upleveled:
     specifier: 7.5.0
-    version: 7.5.0(@babel/core@7.21.8)(@types/eslint@8.56.0)(@types/node@20.11.0)(@types/react-dom@18.2.18)(@types/react@18.2.45)(eslint@8.56.0)(globals@13.24.0)(typescript@5.3.3)
+    version: 7.5.0(@babel/core@7.21.8)(@types/eslint@8.56.0)(@types/node@20.11.5)(@types/react-dom@18.2.18)(@types/react@18.2.45)(eslint@8.56.0)(globals@13.24.0)(typescript@5.3.3)
   typescript:
     specifier: 5.3.3
     version: 5.3.3
@@ -520,8 +520,8 @@ packages:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
     dev: false
 
-  /@types/node@20.11.0:
-    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
+  /@types/node@20.11.5:
+    resolution: {integrity: sha512-g557vgQjUUfN76MZAN/dt1z3dzcUsimuysco0KeluHgrPdJXkP/XdAURgyO2W9fZWHRtRBiVKzKn8vyOAwlG+w==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1375,7 +1375,7 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-upleveled@7.5.0(@babel/core@7.21.8)(@types/eslint@8.56.0)(@types/node@20.11.0)(@types/react-dom@18.2.18)(@types/react@18.2.45)(eslint@8.56.0)(globals@13.24.0)(typescript@5.3.3):
+  /eslint-config-upleveled@7.5.0(@babel/core@7.21.8)(@types/eslint@8.56.0)(@types/node@20.11.5)(@types/react-dom@18.2.18)(@types/react@18.2.45)(eslint@8.56.0)(globals@13.24.0)(typescript@5.3.3):
     resolution: {integrity: sha512-QRYof5FRBuym13+O3cGv9hRkXooOCPvlPej8AnIJw69bgLL7SrMTVtrIrmeMKr9mmxJO8vgGHACO7M//mNGLIg==}
     engines: {node: '>=20.9.0'}
     hasBin: true
@@ -1391,7 +1391,7 @@ packages:
       '@babel/eslint-parser': 7.23.3(@babel/core@7.21.8)(eslint@8.56.0)
       '@next/eslint-plugin-next': 14.0.4
       '@types/eslint': 8.56.0
-      '@types/node': 20.11.0
+      '@types/node': 20.11.5
       '@types/react': 18.2.45
       '@types/react-dom': 18.2.18
       '@typescript-eslint/eslint-plugin': 6.15.0(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)(typescript@5.3.3)
