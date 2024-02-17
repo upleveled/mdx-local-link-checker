@@ -10,10 +10,11 @@ import walkSync from 'walk-sync';
 
 const isMatch = micromatch.isMatch;
 
-if (/--help|-h/.test(process.argv[2])) {
-  console.log(`mdx-local-link-checker ${
+if (process.argv[2] && /--help|-h/.test(process.argv[2])) {
+  const version = /** @type {string} */ (
     JSON.parse(readFileSync('./package.json', 'utf-8')).version
-  }
+  );
+  console.log(`mdx-local-link-checker ${version}
 
 Usage: mdx-local-link-checker [dir] [basepath] [ignorePattern]
 
@@ -44,20 +45,26 @@ function removeMarkdownCodeBlocks(/** @type {string} */ markdown) {
   return markdown.replace(/```[\s\S]+?```/g, '');
 }
 
-/** @type {{
- *   [filePathAbs: string]: {
- *     filePath: string,
- *     filePathAbs: string,
- *     externalLinks: string[],
- *     internalLinks: {
- *       original: string,
- *       absolute: string,
- *     }[],
- *     ids: {
- *       [id: string]: boolean,
- *     },
+/**
+ * @typedef {{
+ *   filePath: string,
+ *   filePathAbs: string,
+ *   externalLinks: string[],
+ *   internalLinks: {
+ *     original: string,
+ *     absolute: string,
+ *   }[],
+ *   ids: {
+ *     [id: string]: boolean,
  *   },
- * }} */
+ * }} CacheEntry
+ */
+
+/**
+ * @type {{
+ *   [filePathAbs: string]: CacheEntry,
+ * }}
+ */
 const cache = {};
 let exitCode = 0;
 
@@ -75,7 +82,7 @@ function fillCache(
   markdownOrJsx.replace(
     /\s+(?:(?:"(?:id|name)":\s*)|(?:(?:id|name)=))"([^"]+)"/g,
     (/** @type {string} */ str, /** @type {string} */ match) => {
-      cache[filePathAbs].ids[match] = true;
+      /** @type {CacheEntry} */ (cache[filePathAbs]).ids[match] = true;
       // Discard replacement
       return '';
     },
@@ -99,7 +106,9 @@ function fillCache(
         }
 
         if (match.match(/^https?:\/\//)) {
-          cache[filePathAbs].externalLinks.push(match);
+          /** @type {CacheEntry} */ (cache[filePathAbs]).externalLinks.push(
+            match,
+          );
         } else if (match.match(/^[^:]+:.*/)) {
           // ignore links such as "mailto:" or "javascript:"
         } else {
@@ -119,7 +128,7 @@ function fillCache(
             absolute = path.resolve(filePathBase + '/' + match);
           }
 
-          cache[filePathAbs].internalLinks.push({
+          /** @type {CacheEntry} */ (cache[filePathAbs]).internalLinks.push({
             original: match,
             absolute,
           });
@@ -181,7 +190,9 @@ filePaths.forEach((relativePath) => {
 const errors = [];
 
 for (const file in cache) {
-  const { internalLinks, filePathAbs } = cache[file];
+  const { internalLinks, filePathAbs } = /** @type {CacheEntry} */ (
+    cache[file]
+  );
 
   // eslint-disable-next-line no-loop-func
   internalLinks.forEach((link) => {
@@ -189,9 +200,8 @@ for (const file in cache) {
 
     const [targetFile, targetId] = link.absolute.split('#');
 
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (!cache[targetFile]) {
-      if (existsSync(targetFile)) {
+    if (!targetFile || !cache[targetFile]) {
+      if (targetFile && existsSync(targetFile)) {
         readFileIntoCache(targetFile);
       } else {
         exitCode = 1;
@@ -207,8 +217,7 @@ for (const file in cache) {
       }
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if (targetId && (!cache[targetFile] || !cache[targetFile].ids[targetId])) {
+    if (targetId && (!cache[targetFile] || !cache[targetFile]?.ids[targetId])) {
       exitCode = 1;
       console.error(
         `Anchor of link is broken: '${link.original}' in file ${filePathAbs}`,
