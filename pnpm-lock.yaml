@@ -37,6 +37,9 @@ devDependencies:
   eslint-config-upleveled:
     specifier: 7.8.0
     version: 7.8.0(@babel/core@7.21.8)(@types/eslint@8.56.2)(@types/node@20.11.19)(@types/react-dom@18.2.19)(@types/react@18.2.55)(eslint@8.56.0)(globals@13.24.0)(typescript@5.3.3)
+  prettier:
+    specifier: 3.2.5
+    version: 3.2.5
   typescript:
     specifier: 5.3.3
     version: 5.3.3
@@ -2907,6 +2910,12 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /prop-types@15.8.1:
