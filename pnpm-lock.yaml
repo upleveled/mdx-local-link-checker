@@ -31,14 +31,14 @@ importers:
         specifier: 4.0.7
         version: 4.0.7
       '@types/node':
-        specifier: 20.12.11
-        version: 20.12.11
+        specifier: 20.12.12
+        version: 20.12.12
       '@types/unist':
         specifier: 3.0.2
         version: 3.0.2
       eslint-config-upleveled:
         specifier: 8.1.0
-        version: 8.1.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.12.11)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint@8.57.0)(globals@15.0.0)(typescript@5.4.5)
+        version: 8.1.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.12.12)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint@8.57.0)(globals@15.0.0)(typescript@5.4.5)
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -274,8 +274,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@20.12.11':
-    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
+  '@types/node@20.12.12':
+    resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2354,7 +2354,7 @@ snapshots:
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@20.12.11':
+  '@types/node@20.12.12':
     dependencies:
       undici-types: 5.26.5
 
@@ -2965,12 +2965,12 @@ snapshots:
       find-up: 7.0.0
       parse-gitignore: 2.0.0
 
-  eslint-config-upleveled@8.1.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.12.11)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint@8.57.0)(globals@15.0.0)(typescript@5.4.5):
+  eslint-config-upleveled@8.1.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.12.12)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint@8.57.0)(globals@15.0.0)(typescript@5.4.5):
     dependencies:
       '@babel/eslint-parser': 7.24.5(@babel/core@7.12.9)(eslint@8.57.0)
       '@next/eslint-plugin-next': 14.2.3
       '@types/eslint': 8.56.8
-      '@types/node': 20.12.11
+      '@types/node': 20.12.12
       '@types/react': 18.2.76
       '@types/react-dom': 18.2.25
       '@typescript-eslint/eslint-plugin': 7.8.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
