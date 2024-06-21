@@ -16,16 +16,16 @@
     "@mdx-js/mdx": "1.6.22",
     "micromatch": "4.0.7",
     "remark-slug": "7.0.1",
-    "unified": "11.0.4",
+    "unified": "11.0.5",
     "unist-util-remove": "4.0.0",
     "walk-sync": "3.0.0"
   },
   "devDependencies": {
     "@types/micromatch": "4.0.7",
-    "@types/node": "20.14.2",
+    "@types/node": "20.14.7",
     "@types/unist": "3.0.2",
-    "eslint-config-upleveled": "8.2.1",
+    "eslint-config-upleveled": "8.3.0",
     "prettier": "3.3.2",
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   }
 }
