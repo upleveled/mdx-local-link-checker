@@ -28,17 +28,17 @@ importers:
         version: 3.0.0
     devDependencies:
       '@types/micromatch':
-        specifier: 4.0.7
-        version: 4.0.7
+        specifier: 4.0.8
+        version: 4.0.8
       '@types/node':
-        specifier: 20.14.7
-        version: 20.14.7
+        specifier: 20.14.9
+        version: 20.14.9
       '@types/unist':
         specifier: 3.0.2
         version: 3.0.2
       eslint-config-upleveled:
         specifier: 8.3.0
-        version: 8.3.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.14.7)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.0.0-alpha.30(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0))(eslint@8.57.0)(globals@15.0.0)(typescript@5.5.2)
+        version: 8.3.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.14.9)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.0.0-alpha.30(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0))(eslint@8.57.0)(globals@15.0.0)(typescript@5.5.2)
       prettier:
         specifier: 3.3.2
         version: 3.3.2
@@ -274,14 +274,14 @@ packages:
   '@types/mdast@3.0.11':
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
 
-  '@types/micromatch@4.0.7':
-    resolution: {integrity: sha512-C/FMQ8HJAZhTsDpl4wDKZdMeeW5USjgzOczUwTGbRc1ZopPgOhIEnxY2ZgUrsuyy4DwK1JVOJZKFakv3TbCKiA==}
+  '@types/micromatch@4.0.8':
+    resolution: {integrity: sha512-hAe0Hc9yJWESaUVl5NM09E9IdAk/0k5njp0gV3yEI5SkmjWuFYh9IexqX3/eTC0y+J+RMx2WIBqkfuzvTRnVmg==}
 
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@20.14.7':
-    resolution: {integrity: sha512-uTr2m2IbJJucF3KUxgnGOZvYbN0QgkGyWxG6973HCpMYFy2KfcgYuIwkJQMQkt1VbBMlvWRbpshFTLxnxCZjKQ==}
+  '@types/node@20.14.9':
+    resolution: {integrity: sha512-06OCtnTXtWOZBJlRApleWndH4JsRVs1pDCc8dLSQp+7PpUpX3ePdHyeNSFTeSe7FtKyQkrlPvHwJOW3SLd8Oyg==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2392,13 +2392,13 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.2
 
-  '@types/micromatch@4.0.7':
+  '@types/micromatch@4.0.8':
     dependencies:
       '@types/braces': 3.0.1
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@20.14.7':
+  '@types/node@20.14.9':
     dependencies:
       undici-types: 5.26.5
 
@@ -3038,13 +3038,13 @@ snapshots:
       find-up: 7.0.0
       parse-gitignore: 2.0.0
 
-  eslint-config-upleveled@8.3.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.14.7)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.0.0-alpha.30(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0))(eslint@8.57.0)(globals@15.0.0)(typescript@5.5.2):
+  eslint-config-upleveled@8.3.0(@babel/core@7.12.9)(@types/eslint@8.56.8)(@types/node@20.14.9)(@types/react-dom@18.2.25)(@types/react@18.2.76)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.0.0-alpha.30(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0))(eslint@8.57.0)(globals@15.0.0)(typescript@5.5.2):
     dependencies:
       '@babel/eslint-parser': 7.24.7(@babel/core@7.12.9)(eslint@8.57.0)
       '@eslint/compat': 1.1.0
       '@next/eslint-plugin-next': 14.2.4
       '@types/eslint': 8.56.8
-      '@types/node': 20.14.7
+      '@types/node': 20.14.9
       '@types/react': 18.2.76
       '@types/react-dom': 18.2.25
       '@typescript-eslint/eslint-plugin': 8.0.0-alpha.30(@typescript-eslint/parser@8.0.0-alpha.30(eslint@8.57.0)(typescript@5.5.2))(eslint@8.57.0)(typescript@5.5.2)
