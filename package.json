@@ -21,11 +21,11 @@
     "walk-sync": "3.0.0"
   },
   "devDependencies": {
-    "@types/micromatch": "4.0.8",
+    "@types/micromatch": "4.0.9",
     "@types/node": "20.14.9",
     "@types/unist": "3.0.2",
-    "eslint-config-upleveled": "8.3.0",
+    "eslint-config-upleveled": "8.5.0",
     "prettier": "3.3.2",
-    "typescript": "5.5.2"
+    "typescript": "5.5.3"
   }
 }
