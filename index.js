@@ -11,10 +11,10 @@ import walkSync from 'walk-sync';
 const isMatch = micromatch.isMatch;
 
 if (process.argv[2] && /--help|-h/.test(process.argv[2])) {
-  const version = /** @type {string} */ (
-    JSON.parse(readFileSync('./package.json', 'utf-8')).version
+  const packageJson = /** @type {{ version: string }} */ (
+    JSON.parse(readFileSync('./package.json', 'utf-8'))
   );
-  console.log(`mdx-local-link-checker ${version}
+  console.log(`mdx-local-link-checker ${packageJson.version}
 
 Usage: mdx-local-link-checker [dir] [basepath] [ignorePattern]
 
