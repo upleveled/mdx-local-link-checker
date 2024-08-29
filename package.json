@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
-    "micromatch": "4.0.7",
+    "micromatch": "4.0.8",
     "remark-slug": "7.0.1",
     "unified": "11.0.5",
     "unist-util-remove": "4.0.0",
@@ -22,11 +22,11 @@
   },
   "devDependencies": {
     "@types/micromatch": "4.0.9",
-    "@types/node": "22.5.0",
+    "@types/node": "22.5.1",
     "@types/unist": "3.0.3",
-    "eslint-config-upleveled": "8.6.14",
+    "eslint-config-upleveled": "8.6.15",
     "prettier": "3.3.3",
     "typescript": "5.5.4"
   },
-  "packageManager": "pnpm@9.8.0"
+  "packageManager": "pnpm@9.9.0"
 }
