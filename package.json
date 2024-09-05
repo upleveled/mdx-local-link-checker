@@ -22,9 +22,9 @@
   },
   "devDependencies": {
     "@types/micromatch": "4.0.9",
-    "@types/node": "22.5.1",
+    "@types/node": "22.5.4",
     "@types/unist": "3.0.3",
-    "eslint-config-upleveled": "8.6.15",
+    "eslint-config-upleveled": "8.6.16",
     "prettier": "3.3.3",
     "typescript": "5.5.4"
   },
