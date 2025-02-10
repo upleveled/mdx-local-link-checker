@@ -166,7 +166,6 @@ function readFileIntoCache(/** @type {string} */ filePath) {
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   if (!cache[filePathAbs]) {
     cache[filePathAbs] = {
       filePath,
