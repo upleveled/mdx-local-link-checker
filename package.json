@@ -30,6 +30,11 @@
     "typescript": "5.8.3"
   },
   "packageManager": "pnpm@10.13.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "unrs-resolver"
+    ]
+  },
   "engines": {
     "node": ">=22.13.0"
   }
