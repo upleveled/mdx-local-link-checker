@@ -18,7 +18,7 @@
     "remark-slug": "7.0.1",
     "unified": "11.0.5",
     "unist-util-remove": "4.0.0",
-    "walk-sync": "3.0.0"
+    "walk-sync": "4.0.1"
   },
   "devDependencies": {
     "@types/micromatch": "4.0.9",
