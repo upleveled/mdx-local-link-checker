@@ -22,14 +22,14 @@
   },
   "devDependencies": {
     "@types/micromatch": "4.0.9",
-    "@types/node": "24.3.1",
+    "@types/node": "24.5.2",
     "@types/unist": "3.0.3",
     "eslint": "9.35.0",
-    "eslint-config-upleveled": "9.2.14",
+    "eslint-config-upleveled": "9.2.15",
     "prettier": "3.6.2",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.17.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "unrs-resolver"
