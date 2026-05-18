@@ -15,7 +15,7 @@
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
     "micromatch": "4.0.8",
-    "remark-slug": "7.0.1",
+    "remark-slug": "8.0.0",
     "unified": "11.0.5",
     "unist-util-remove": "4.0.0",
     "walk-sync": "4.0.1"
