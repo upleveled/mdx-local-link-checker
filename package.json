@@ -18,13 +18,13 @@
     "remark-slug": "7.0.1",
     "unified": "11.0.5",
     "unist-util-remove": "4.0.0",
-    "walk-sync": "4.0.1"
+    "walk-sync": "4.0.2"
   },
   "devDependencies": {
     "@types/micromatch": "4.0.10",
-    "@types/node": "25.8.0",
+    "@types/node": "25.9.1",
     "@types/unist": "3.0.3",
-    "eslint": "10.3.0",
+    "eslint": "10.4.0",
     "eslint-config-upleveled": "10.0.0",
     "prettier": "3.8.3",
     "typescript": "5.9.3"
