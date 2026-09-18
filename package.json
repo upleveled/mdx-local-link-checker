@@ -22,10 +22,10 @@
   },
   "devDependencies": {
     "@types/micromatch": "4.0.10",
-    "@types/node": "26.4.1",
+    "@types/node": "26.5.1",
     "@types/unist": "3.0.3",
-    "eslint": "10.9.1",
-    "eslint-config-upleveled": "10.0.3",
+    "eslint": "10.10.0",
+    "eslint-config-upleveled": "10.0.4",
     "prettier": "3.9.6",
     "typescript": "5.9.3"
   },
