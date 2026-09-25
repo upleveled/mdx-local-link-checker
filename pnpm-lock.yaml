@@ -31,8 +31,8 @@ importers:
         specifier: 4.0.10
         version: 4.0.10
       '@types/node':
-        specifier: 26.5.1
-        version: 26.5.1
+        specifier: 26.6.1
+        version: 26.6.1
       '@types/unist':
         specifier: 3.0.3
         version: 3.0.3
@@ -41,10 +41,10 @@ importers:
         version: 10.10.0
       eslint-config-upleveled:
         specifier: 10.0.4
-        version: 10.0.4(@types/node@26.5.1)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint@10.10.0))(eslint@10.10.0)(globals@17.11.0)(typescript@5.9.3)
+        version: 10.0.4(@types/node@26.6.1)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint@10.10.0))(eslint@10.10.0)(globals@17.11.0)(typescript@5.9.3)
       prettier:
-        specifier: 3.9.6
-        version: 3.9.6
+        specifier: 3.9.8
+        version: 3.9.8
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -357,8 +357,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@26.5.1':
-    resolution: {integrity: sha512-CzNm2FezW4VR/LjG6yUdiEgLE/rAQ9Slj5gCu/C2VrdcW7I0ahNZ8DRbHT7zOZ6r3ONgd/bsQIeSaoDGrd1C6g==}
+  '@types/node@26.6.1':
+    resolution: {integrity: sha512-VqGJBMCtdhqkBUCcBLvywI0NJ+KLuVzgNnlBUNFOQjqVxzo2lxLUNg1DSey8+u2u6ktswSAxg+s68QLzWHNOuA==}
 
   '@types/parse5@5.0.3':
     resolution: {integrity: sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==}
@@ -1612,8 +1612,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.9.6:
-    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+  prettier@3.9.8:
+    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2488,7 +2488,7 @@ snapshots:
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@26.5.1':
+  '@types/node@26.6.1':
     dependencies:
       undici-types: 8.9.0
 
@@ -3018,12 +3018,12 @@ snapshots:
       '@eslint/compat': 2.1.1(eslint@10.10.0)
       eslint: 10.10.0
 
-  eslint-config-upleveled@10.0.4(@types/node@26.5.1)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint@10.10.0))(eslint@10.10.0)(globals@17.11.0)(typescript@5.9.3):
+  eslint-config-upleveled@10.0.4(@types/node@26.6.1)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint@10.10.0))(eslint@10.10.0)(globals@17.11.0)(typescript@5.9.3):
     dependencies:
       '@eslint/compat': 2.1.1(eslint@10.10.0)
       '@next/eslint-plugin-next': 16.3.4(eslint@10.10.0)
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.10.0)
-      '@types/node': 26.5.1
+      '@types/node': 26.6.1
       '@types/react': 18.2.76
       '@types/react-dom': 18.2.25
       '@typescript-eslint/eslint-plugin': 8.69.0(@typescript-eslint/parser@8.69.0(eslint@10.10.0)(typescript@5.9.3))(eslint@10.10.0)(typescript@5.9.3)
@@ -3939,7 +3939,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.9.6: {}
+  prettier@3.9.8: {}
 
   property-information@5.6.0:
     dependencies:
