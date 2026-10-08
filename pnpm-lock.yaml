@@ -31,8 +31,8 @@ importers:
         specifier: 4.0.10
         version: 4.0.10
       '@types/node':
-        specifier: 26.6.2
-        version: 26.6.2
+        specifier: 26.6.3
+        version: 26.6.3
       '@types/unist':
         specifier: 3.0.3
         version: 3.0.3
@@ -41,7 +41,7 @@ importers:
         version: 10.11.0
       eslint-config-upleveled:
         specifier: 11.0.1
-        version: 11.0.1(@types/node@26.6.2)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.71.0(eslint@10.11.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0)(typescript@5.9.3))(eslint@10.11.0))(eslint@10.11.0)(globals@17.13.0)(typescript@5.9.3)
+        version: 11.0.1(@types/node@26.6.3)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.71.0(eslint@10.11.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0)(typescript@5.9.3))(eslint@10.11.0))(eslint@10.11.0)(globals@17.13.0)(typescript@5.9.3)
       prettier:
         specifier: 3.9.9
         version: 3.9.9
@@ -377,8 +377,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@26.6.2':
-    resolution: {integrity: sha512-X1P21scMv4zGKLYqjdGjaKa7COa0RKVYYZZN/NfvLQ1JegxFhdhpZG/Lyn8AXx6CDUavKAd11v6BvfpkDByK8g==}
+  '@types/node@26.6.3':
+    resolution: {integrity: sha512-dsqMQQoeTLqu9wynDD00q573mNzso3IdQOAfHRJqLCcmCFPoGo9A1bDpUcv/9tnKpErQWv9uKeGfl37EIS02Yg==}
 
   '@types/parse5@5.0.3':
     resolution: {integrity: sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==}
@@ -2521,7 +2521,7 @@ snapshots:
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@26.6.2':
+  '@types/node@26.6.3':
     dependencies:
       undici-types: 8.9.0
 
@@ -3130,13 +3130,13 @@ snapshots:
       '@eslint/compat': 2.1.1(eslint@10.11.0)
       eslint: 10.11.0
 
-  eslint-config-upleveled@11.0.1(@types/node@26.6.2)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.71.0(eslint@10.11.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0)(typescript@5.9.3))(eslint@10.11.0))(eslint@10.11.0)(globals@17.13.0)(typescript@5.9.3):
+  eslint-config-upleveled@11.0.1(@types/node@26.6.3)(@types/react-dom@18.2.25)(@types/react@18.2.76)(@typescript-eslint/utils@8.71.0(eslint@10.11.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0)(typescript@5.9.3))(eslint@10.11.0))(eslint@10.11.0)(globals@17.13.0)(typescript@5.9.3):
     dependencies:
       '@eslint-react/kit': 5.20.8(eslint@10.11.0)(typescript@5.9.3)
       '@eslint/compat': 2.1.1(eslint@10.11.0)
       '@next/eslint-plugin-next': 16.3.6(eslint@10.11.0)
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.11.0)
-      '@types/node': 26.6.2
+      '@types/node': 26.6.3
       '@types/react': 18.2.76
       '@types/react-dom': 18.2.25
       '@typescript-eslint/eslint-plugin': 8.70.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0)(typescript@5.9.3))(eslint@10.11.0)(typescript@5.9.3)

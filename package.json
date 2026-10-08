@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/micromatch": "4.0.10",
-    "@types/node": "26.6.2",
+    "@types/node": "26.6.3",
     "@types/unist": "3.0.3",
     "eslint": "10.11.0",
     "eslint-config-upleveled": "11.0.1",
