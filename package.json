@@ -10,7 +10,8 @@
     "index.js"
   ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node --test"
   },
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",

@@ -1,9 +1,9 @@
-name: Lint and Check Types
+name: CI
 on: push
 
 jobs:
-  lint-and-check-types:
-    name: Lint and Check Types
+  ci:
+    name: CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -16,3 +16,4 @@ jobs:
         run: pnpm install
       - run: pnpm eslint . --max-warnings 0
       - run: pnpm tsc
+      - run: pnpm test
