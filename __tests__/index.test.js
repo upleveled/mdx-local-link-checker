@@ -3,7 +3,7 @@ import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import test from 'node:test';
 
-await test('CLI accepts Markdown and MDX links to files and heading anchors', () => {
+await test('CLI succeeds for valid Markdown and MDX file links and heading anchors', () => {
   const dir = path.join(import.meta.dirname, 'fixtures/valid');
   const result = spawnSync(process.execPath, ['index.js', dir, dir], {
     encoding: 'utf-8',
@@ -13,7 +13,7 @@ await test('CLI accepts Markdown and MDX links to files and heading anchors', ()
   assert.equal(result.stderr, '');
 });
 
-await test('CLI reports a broken Markdown link and exits with status 1', () => {
+await test('CLI fails for a broken Markdown file link', () => {
   const dir = path.join(import.meta.dirname, 'fixtures/broken');
   const result = spawnSync(process.execPath, ['index.js', dir, dir], {
     encoding: 'utf-8',
