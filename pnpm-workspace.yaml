@@ -1,7 +1,7 @@
 # Allow build scripts for trusted dependencies
 # - https://pnpm.io/settings#allowbuilds
 allowBuilds:
-  unrs-resolver: true
+  unrs-resolver: false
 
 # Prevent installation of packages newer than 7 days
 # to mitigate supply chain risks
